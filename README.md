@@ -1,2 +1,2 @@
 # 42_cursus
-42Seoul
+42Seoul~~
