@@ -1,4 +1,4 @@
-# PHILOSOPHER
+# Philosophers
 ## 📍 SUBJECT
 철학이 이렇게 치명적인 줄은 생각치도 못했지.
 
