@@ -7,13 +7,13 @@
 
 |circle|project|topics|lang|
 |--|----|------|--|
-|00|libft|libc|c|
-|01|get_next_line||c|
-||ft_printf||c|
-|02|so_long||c|
-||minitalk||c|
-||push_swap||c|
-|03|philosophers||c|
-||minishell||c|
-|04|cub3D||c|
-||CPP_Module_00~08||c++|
+|00|[libft](https://github.com/kjy00/42_cursus/tree/main/libft)|libc|c|
+|01|[get_next_line](https://github.com/kjy00/42_cursus)||c|
+||[ft_printf](https://github.com/kjy00/42_cursus/tree/main/ft_printf)||c|
+|02|[so_long](https://github.com/kjy00/42_cursus/tree/main/so_long)||c|
+||[minitalk](https://github.com/kjy00/42_cursus/tree/main/minitalk)||c|
+||[push_swap](https://github.com/kjy00/42_cursus/tree/main/push_swap)||c|
+|03|[philosophers](https://github.com/kjy00/42_cursus/tree/main/Philosophers)||c|
+||[minishell](https://github.com/dkjefilsjl/minishell)||c|
+|04|[cub3D](https://github.com/tamagoyakii/cub3D)||c|
+||[CPP_Module_00~08](https://github.com/kjy00/42_cursus/tree/main/CPP_Module)||c++|
