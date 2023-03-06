@@ -21,7 +21,6 @@ WORKDIR /var/www/html
 
 RUN sed -i 's/;chdir = \/var\/www/chdir = \/var\/www\/html/g' /etc/php81/php-fpm.d/www.conf
 RUN sed -i 's/listen = 127.0.0.1:9000/listen = 0.0.0.0:9000/g' /etc/php81/php-fpm.d/www.conf
-RUN sed -i 's/;clear_env = no/clear_env = no/g' /etc/php81/php-fpm.d/www.conf
 
 COPY ./tools/wp.sh /tmp/wp.sh
 RUN chmod +x /tmp/wp.sh
