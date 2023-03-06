@@ -4,9 +4,10 @@ RUN apk update && apk upgrade
 RUN	apk add php81-fpm \
 		php81 \
 		php81-curl \
-		php81-phar
-		# mariadb-client \
-		# php8-mysqli \
+		php81-phar \
+		php81-mysqli \
+		php81-iconv \
+		mariadb-client 
 		# php8-mysqlnd \
 		# php8-openssl \
 		# php8-json \
@@ -29,10 +30,11 @@ WORKDIR /var/www/html
 
 RUN sed -i 's/;chdir = \/var\/www/chdir = \/var\/www\/html/g' /etc/php81/php-fpm.d/www.conf
 RUN sed -i 's/listen = 127.0.0.1:9000/listen = 0.0.0.0:9000/g' /etc/php81/php-fpm.d/www.conf
+RUN sed -i 's/;clear_env = no/clear_env = no/g' /etc/php81/php-fpm.d/www.conf
+
 COPY ./tools/wp.sh /tmp/wp.sh
 RUN chmod +x /tmp/wp.sh
 
 EXPOSE 9000
 
 ENTRYPOINT [ "sh", "/tmp/wp.sh" ]
-# CMD ["/usr/sbin/php-fpm81", "--nodaemonize"]

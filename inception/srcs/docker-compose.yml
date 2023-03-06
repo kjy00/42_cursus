@@ -17,6 +17,8 @@ services:
   mariadb:
     container_name: mariadb
     build: ./requirements/mariadb
+    env_file:
+      - .env
     ports:
       - 3306:3306
     restart: always
@@ -27,8 +29,10 @@ services:
   nginx:
     container_name: nginx
     build: ./requirements/nginx
+    env_file:
+      - .env
     ports:
-      - 8080:80
+      - 80:80
     restart: always
     networks:
       - intra
@@ -37,6 +41,8 @@ services:
   wordpress:
     container_name: wordpress
     build: ./requirements/wordpress
+    env_file:
+      - .env
     restart: always
     networks:
       - intra
