@@ -32,12 +32,14 @@ services:
     env_file:
       - .env
     ports:
-      - 80:80
+      - 443:443
     restart: always
     networks:
       - intra
     volumes:
       - wp-volume:/var/www/html
+    depends_on:
+      - wordpress
   wordpress:
     container_name: wordpress
     build: ./requirements/wordpress
@@ -48,6 +50,8 @@ services:
       - intra
     volumes:
       - wp-volume:/var/www/html
+    depends_on:
+      - mariadb
 networks:
   intra:
     driver: bridge

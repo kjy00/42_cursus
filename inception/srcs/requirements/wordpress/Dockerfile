@@ -8,15 +8,6 @@ RUN	apk add php81-fpm \
 		php81-mysqli \
 		php81-iconv \
 		mariadb-client 
-		# php8-mysqlnd \
-		# php8-openssl \
-		# php8-json \
-		# php8-exif \
-		# php8-dom \
-		# php8-mbstring \
-		# php8-fileinfo \
-		# php8-xml \
-		# php8-zip
 RUN apk add curl
 
 WORKDIR /tmp
