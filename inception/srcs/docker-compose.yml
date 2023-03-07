@@ -4,13 +4,13 @@ volumes:
   db-volume:
     driver: local
     driver_opts:
-      device: /Users/kimjiyoon/42Seoul/dockerdata/mariadb #/home/jiyokim/data/db-data
+      device: /home/jiyokim/data/db-data
       type: none
       o: bind
   wp-volume:
     driver: local
     driver_opts:
-      device: /Users/kimjiyoon/42Seoul/dockerdata/wordpress #/home/jiyokim/data/wp-data
+      device: /home/jiyokim/data/wp-data
       type: none
       o: bind
 services:
