@@ -1,8 +1,3 @@
-
-db_name=`wp config get DB_NAME 2> /dev/null`
-wp_admin=`wp user get admin --field=user_login 2> /dev/null`
-wp_user=`wp user get ${WP_USER} --field=user_login 2> /dev/null`
-
 if [ ! -f "/var/www/html/index.php" ]; then
   wp core download
 	wp config create --dbhost=mariadb:3306 --dbname=${MYSQL_DATABASE} --dbuser=${MYSQL_USER} --dbpass=${MYSQL_USER_PASSWORD}

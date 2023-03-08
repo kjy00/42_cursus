@@ -16,4 +16,3 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 sudo usermod -a -G docker $USER
 sudo echo "127.0.0.1 jiyokim.42.fr" | sudo tee -a /etc/hosts
 sudo reboot
-# 도커 스타트?
