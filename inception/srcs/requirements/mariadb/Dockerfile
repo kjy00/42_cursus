@@ -3,10 +3,7 @@ FROM alpine:3.17
 RUN mkdir -p /run/mysqld
 RUN mkdir -p /var/lib/mysql
 RUN apk update && apk upgrade
-RUN	apk add mariadb \
-		mariadb-common \
-		mariadb-client \
-		mariadb-server-utils
+RUN	apk add mariadb mariadb-client
 
 COPY ./tools/init_db.sh /tmp/init_db.sh
 RUN chown -R mysql:mysql /run/mysqld

@@ -16,11 +16,10 @@ volumes:
 services:
   mariadb:
     container_name: mariadb
+    image: mariadb
     build: ./requirements/mariadb
     env_file:
       - .env
-    ports:
-      - 3306:3306
     restart: always
     networks:
       - intra
@@ -28,6 +27,7 @@ services:
       - db-volume:/var/lib/mysql
   nginx:
     container_name: nginx
+    image: nginx
     build: ./requirements/nginx
     env_file:
       - .env
@@ -42,6 +42,7 @@ services:
       - wordpress
   wordpress:
     container_name: wordpress
+    image: wordpress
     build: ./requirements/wordpress
     env_file:
       - .env
